@@ -9,7 +9,7 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *once = list, *second = list;
+	listint_t *once = list, *twice = list;
 
 	while ((once != NULL) && (twice != NULL))
 	{
