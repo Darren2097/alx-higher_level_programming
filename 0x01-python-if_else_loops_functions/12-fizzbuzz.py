@@ -6,10 +6,10 @@ def fizzbuzz():
             print("{}".format("Fizz"), end=" ")
         elif i % 5 == 0:
             if i == 100:
-                print("{}".format(i), end="")
+                print("{}".format("Buzz"), end=" ")
             else:
                 print("{}".format("Buzz", end=" "))
         elif i % 3 == 0 and i % 5 == 0:
             print("{}".format("FizzBuzz", end=" "))
         else:
-            print("{}".format(i), end=" ")
+            print("{:d}".format(i), end=" ")
