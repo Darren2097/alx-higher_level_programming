@@ -6,7 +6,7 @@ if __name__ == '__main__':
     from calculator_1 import add, sub, mul, div
 
     if len(sys.argv) != 4:
-        print("usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
     elif sys.argv[2] not in ["+", "-", "*", "/"]:
         print("unknown operator. Available operators: +, -, * and /")
