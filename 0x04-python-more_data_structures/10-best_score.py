@@ -5,9 +5,9 @@ def best_score(a_dictionary):
         score = None
         person = None
 
-    for i in a_dictionary.keys():
-        if score is None or a_dictionary[i] > score:
-            score = a_dictionary[i]
-            person = i
+        for i in a_dictionary.keys():
+            if score is None or a_dictionary[i] > score:
+                score = a_dictionary[i]
+                person = i
 
-    return person
+        return person
