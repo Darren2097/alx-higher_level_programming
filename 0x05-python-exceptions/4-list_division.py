@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def check_division(a, b):
 
     div = 0
@@ -12,6 +13,7 @@ def check_division(a, b):
         print("wrong type")
     finally:
         return div
+
 
 def list_division(my_list_1, my_list_2, list_length):
 
