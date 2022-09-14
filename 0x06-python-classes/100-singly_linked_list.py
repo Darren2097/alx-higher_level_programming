@@ -13,15 +13,14 @@ class Node:
         self.next_node = next_node
 
     @property
-    """gets the data of the node"""
-
     def data(self):
+        """gets the data of the node"""
+
         return self.__data
 
     @data.setter
-    """sets the data of the node"""
-
     def data(self, value):
+        """sets the data of the node"""
 
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
@@ -29,15 +28,14 @@ class Node:
         self.__data = value
 
     @property
-    """gets the next node"""
-
     def next_node(self):
+        """gets the next node"""
+
         return self.__next_node
 
     @next_node.setter
-    """sets the next node"""
-
     def next_node(self, value):
+        """sets the next node"""
 
         if value is None or isinstance(value, Node):
             self.__next_node = value
@@ -71,3 +69,19 @@ class SinglyLinkedList:
                     self.__head = new
                     break
                 node = node.next_node
+
+if __name__ == '__main__':
+    sll = SinglyLinkedList()
+
+    sll.sorted_insert(2)
+    sll.sorted_insert(5)
+    sll.sorted_insert(3)
+    sll.sorted_insert(10)
+    sll.sorted_insert(1)
+    sll.sorted_insert(-4)
+    sll.sorted_insert(-3)
+    sll.sorted_insert(4)
+    sll.sorted_insert(5)
+    sll.sorted_insert(12)
+    sll.sorted_insert(3)
+    print(sll)
