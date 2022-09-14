@@ -60,7 +60,7 @@ class SinglyLinkedList:
         else:
             node = self.__head
             while node.next_node:
-                if new.data >= node.data:
+                if new.data >= node.data and new.data <= node.next_node.data:
                     new.next_node = node.next_node
                     node.next_node = new
                     break
@@ -69,19 +69,24 @@ class SinglyLinkedList:
                     self.__head = new
                     break
                 node = node.next_node
+            if new.data >= node.data:
+                node.next_node = new
+            else:
+                new.next_node = node
+                self.__head = new
 
-if __name__ == '__main__':
-    sll = SinglyLinkedList()
+    def __str__(self):
+        """string representation of singly linked list"""
 
-    sll.sorted_insert(2)
-    sll.sorted_insert(5)
-    sll.sorted_insert(3)
-    sll.sorted_insert(10)
-    sll.sorted_insert(1)
-    sll.sorted_insert(-4)
-    sll.sorted_insert(-3)
-    sll.sorted_insert(4)
-    sll.sorted_insert(5)
-    sll.sorted_insert(12)
-    sll.sorted_insert(3)
-    print(sll)
+        node = self.__head
+        new_list = ''
+        if node is None:
+            new_list = ''
+        elif node.next_node is None:
+            new_list += str(node.data)
+        else:
+            while node.next_node:
+                new_list += str(node.data) + '\n'
+                node = node.next_node
+                new_list += str(node.data)
+        return new_list
