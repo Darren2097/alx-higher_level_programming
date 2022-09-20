@@ -25,12 +25,12 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-                            
+
     @property
     def height(self):
         """returns height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """sets the height"""
@@ -47,12 +47,12 @@ class Rectangle:
 
     def perimeter(self):
         """returns perimeter of rectangle"""
-                                            
+
         if self.width == 0 or self.height == 0:
             return 0
         else:
             return ((2 * self.width) + (2 * self.height))
-    
+
     def __str__(self):
         """prints the rectangle with the character #"""
 
