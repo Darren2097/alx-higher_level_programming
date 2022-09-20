@@ -63,5 +63,5 @@ class Rectangle:
             for j in range(self.width):
                 string += '#'
             string += '\n'
-        string += '#' * len(self.width)
+        string += '#' * self.width
         return string
