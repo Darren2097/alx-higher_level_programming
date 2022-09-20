@@ -27,16 +27,6 @@ def text_indentation(text):
     if len(string) > 0:
         print(string, end='')
 
-if __name__ == '__main__':
-    text_indentation("Lorem amet? consectetur adipiscing elit. Quonam: modo")
-    print()
-    text_indentation("text without characters")
-    print()
-    text_indentation("")
-    print()
-    text_indentation("hello.there")
-    print()
-    text_indentation("hello.")
-    print()
-    text_indentation("Holberton. School? How are you: John")
-    print()
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/5-text_indentation.txt")
