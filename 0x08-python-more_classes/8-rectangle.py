@@ -90,4 +90,7 @@ class Rectangle:
 
         if rect_1.area() > rect_2.area():
             return rect_1
-        return rect_2
+        elif rect1.area() == rect2.area():
+            return rect_1
+        else:
+            return rect_2
