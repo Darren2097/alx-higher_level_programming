@@ -12,9 +12,3 @@ class MyInt(int):
     def __ne__(self, op):
         """gets the opposite of nonequi"""
         return super().__eq__(op)
-
-if __name__ == '__main__':
-    my_i = MyInt(3)
-    print(my_i)
-    print(my_i == 3)
-    print(my_i != 3)
