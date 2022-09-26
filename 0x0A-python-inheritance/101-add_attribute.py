@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """function that adds a new attribute to an object if it’s possible"""
 
+
 def add_new_attrib(obj, attr, value):
-    """add_new_attrib method"""
+    """add_new_attrib method adds a new attribute if it's possible"""
 
     if hasattr(obj, "__dict__"):
         setattr(obj, attr, value)
