@@ -8,6 +8,7 @@ def inherits_from(obj, a_class):
     """inherits_from method"""
 
     if issubclass(type(obj), a_class):
-        return True
+        if type(obj) is not a_class:
+            return True
     else:
         return False
