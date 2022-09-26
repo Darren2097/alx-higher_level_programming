@@ -4,6 +4,7 @@ specified class ; otherwise False"""
 
 
 def is_same_class(obj, a_class):
+    """is_same_class method"""
 
     if type(obj).__name__ == a_class.__name__:
         return True
