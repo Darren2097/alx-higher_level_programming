@@ -8,7 +8,7 @@ def append_after(filename="", search_string="", new_string=""):
 
     new_line = []
 
-    with open(filename, 'r+' , encoding='utf-8') as f:
+    with open(filename, 'r+', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
             new_line.append(line)
