@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Creates a class Student that defines a student"""
 
+def class_to_json(obj):
+    """class_to_obj method"""
 
-class_to_json = __import__('8-class_to_json').class_to_json
+    return (obj.__dict__)
 
 
 class Student:
