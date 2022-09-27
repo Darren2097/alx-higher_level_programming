@@ -27,4 +27,3 @@ class Student:
                     filter_dict[attr] = obj_dict[attr]
 
             return filter_dict
-
