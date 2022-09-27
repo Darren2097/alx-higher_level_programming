@@ -25,5 +25,4 @@ class Student:
             for attr in attrs:
                 if hasattr(self, attr):
                     filter_dict[attr] = obj_dict[attr]
-
             return filter_dict
