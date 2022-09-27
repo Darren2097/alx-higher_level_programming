@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Creates a class Student that defines a student"""
 
+
 def class_to_json(obj):
     """class_to_obj method"""
 
