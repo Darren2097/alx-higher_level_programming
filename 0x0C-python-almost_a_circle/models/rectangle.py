@@ -53,7 +53,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """Sets rectangle x-coordinate"""
-        
+
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -82,13 +82,45 @@ class Rectangle(Base):
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
 
-        for r in range(self.height):
-            for c in range(self.width):
-                print('#', end='')
+        for i in range(self.y):
             print()
+        for r in range(self.height):
+            for j in range(self.x):
+                print(' ', end='')
+                for c in range(self.width):
+                    print('#', end='')
+                print()
 
     def __str__(self):
         """prints a string to stdout"""
         return ("[{}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
-            type(self).__name__, 
-            self.id, self.x, self.y, self.width, self.height)
+            type(self).__name__,
+            self.id, self.x, self.y, self.width, self.heigh))t
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+
+        if len(args > 0):
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+        elif len(kwargs) > 0:
+            for j, kwarg in enumerate(kwargs):
+                if j == 'id':
+                    self.id = kwarg
+                if j == 'width':
+                    self.width = kwarg
+                if j == 'height':
+                    self.height = kwarg
+                if j == 'x':
+                    self.x = kwarg
+                if j == 'y':
+                    self.y = kwarg
