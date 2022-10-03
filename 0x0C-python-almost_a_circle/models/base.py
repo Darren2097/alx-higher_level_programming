@@ -53,7 +53,7 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
 
-        return json.loads(json.string)
+        return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
