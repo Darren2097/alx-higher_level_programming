@@ -75,10 +75,12 @@ class Base:
 
         obj_list = []
 
-        if path.exists(cls.__name__ + '.json'):
+        try:
             with open(cls.__name__ + '.json', 'r', encoding='utf-8') as f:
                 list_read = cls.from_json_string(f.read())
                 for obj in list_read:
                     obj_list.append(cls.create(**obj))
+        except Exception:
+            pass
 
         return obj_list
