@@ -82,12 +82,14 @@ class Rectangle(Base):
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
 
-        for i in range(self.y):
+        r = self.height
+        c = self.weight
+
+        for k in range(self.y):
             print()
-        for r in range(self.height):
-            for j in range(self.x):
-                print(' ', end='')
-                for c in range(self.width):
+        for i in range(r):
+                print(' ' * self.x, end='')
+                for j in range(c):
                     print('#', end='')
                 print()
 
@@ -100,7 +102,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
 
-        if len(args > 0):
+        if len(args) > 0:
             for i, arg in enumerate(args):
                 if i == 0:
                     self.id = arg
