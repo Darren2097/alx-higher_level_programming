@@ -63,14 +63,7 @@ class Square(Rectangle):
 
         obj_dict = {}
 
-        for i, kwarg in self.__dict__.items():
-            if i == 'id':
-                obj_dict['id'] = kwarg
-            if i == 'size':
-                obj_dict['_Square__size'] = kwarg
-            if i == 'x':
-                obj_dict['_Square__x'] = kwarg
-            if i == 'y':
-                obj_dict['_Square__y'] = kwarg
+        for attr in ['id', 'size', 'x', 'y']:
+            obj_dict[attr] = getattr(self, attr)
 
         return obj_dict
