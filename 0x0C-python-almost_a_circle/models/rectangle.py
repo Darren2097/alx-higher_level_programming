@@ -113,7 +113,7 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = arg
         elif len(kwargs) > 0:
-            for j, kwarg in enumerate(kwargs):
+            for j, kwarg in kwargs.items():
                 if j == 'id':
                     self.id = kwarg
                 if j == 'width':
@@ -124,3 +124,22 @@ class Rectangle(Base):
                     self.x = kwarg
                 if j == 'y':
                     self.y = kwarg
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+
+        obj_dict = {}
+
+        for i, kwarg in self.__dict__.items():
+            if i == 'id':
+                obj_dict['id'] = kwarg
+            if i == '_Rectangle__width':
+                obj_dict['width'] = kwarg
+            if i == '_Rectangle__height':
+                obj_dict['height'] = kwarg
+            if i == '_Rectangle__x':
+                obj_dict['x'] = kwarg
+            if i == '_Rectangle__y':
+                obj_dict['y'] = kwarg
+
+        return obj_dict
