@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Creates a class named Rectangle that inherits from Base"""
-from base import Base
+
+
+Base = __import__("base").Base
 
 
 class Rectangle(Base):
