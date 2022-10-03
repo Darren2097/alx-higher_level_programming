@@ -95,7 +95,7 @@ class Rectangle(Base):
         """prints a string to stdout"""
         return ("[{}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             type(self).__name__,
-            self.id, self.x, self.y, self.width, self.heigh))t
+            self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
