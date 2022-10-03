@@ -43,7 +43,7 @@ class Base:
             if len(json_list) > 0:
                 json_str = Base.to_json_string(json_list)
 
-        with open(cls.__name__ + '.json' + 'w') as f:
+        with open(cls.__name__ + '.json', 'w') as f:
             f.write(json_str)
 
     @staticmethod
