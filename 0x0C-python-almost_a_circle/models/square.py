@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """creates the class Square that inherits from Rectangle"""
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -20,7 +20,7 @@ class Square(Rectangle):
     def size(self, size):
         """sets the size of square"""
 
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("width must be an integer")
         if size <= 0:
             raise ValueError("width must be > 0")
