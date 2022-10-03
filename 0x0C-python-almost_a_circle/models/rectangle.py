@@ -88,10 +88,10 @@ class Rectangle(Base):
         for k in range(self.y):
             print()
         for i in range(r):
-                print(' ' * self.x, end='')
-                for j in range(c):
-                    print('#', end='')
-                print()
+            print(' ' * self.x, end='')
+            for j in range(c):
+                print('#', end='')
+            print()
 
     def __str__(self):
         """prints a string to stdout"""
