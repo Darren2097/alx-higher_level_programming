@@ -36,9 +36,7 @@ class Base:
         json_list = []
         json_str = '[]'
 
-        if list_objs is None:
-            return json_list
-        else:
+        if list_objs is not None:
             for obj in list_objs:
                 json_list.append(obj.to_dictionary())
 
