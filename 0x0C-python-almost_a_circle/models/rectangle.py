@@ -83,7 +83,7 @@ class Rectangle(Base):
         """prints in stdout the Rectangle instance with the character #"""
 
         r = self.height
-        c = self.weight
+        c = self.width
 
         for k in range(self.y):
             print()
