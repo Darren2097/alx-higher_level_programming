@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
     query = """SELECT name FROM cities
-    WHERE state.id = (SELECT id FROM states WHERE name = %s) ORDER BY id ASC"""
+    WHERE state_id = (SELECT id FROM states WHERE name = %s) ORDER BY id ASC"""
     cur.execute(query, (sys.argv[4],))
     rows = cur.fetchall()
 
