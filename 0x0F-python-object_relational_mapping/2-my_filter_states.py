@@ -22,6 +22,6 @@ if __name__ == '__main__':
     for row in rows:
         if row[1] == sys.argv[4]:
             print(row)
-            
+
     cur.close()
     conn.close()
